@@ -1,0 +1,108 @@
+.faq {
+  background-color: var(--color-neutral-50);
+}
+
+.faq__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.faq__header h3 {
+  font-size: var(--text-4xl);
+  color: var(--color-primary-800);
+  margin-top: 0;
+}
+
+.faq__list {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faq__item {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-200);
+  transition: box-shadow var(--transition-base);
+}
+
+.faq__item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-neutral-800);
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: color var(--transition-fast);
+}
+
+.faq__question:hover {
+  color: var(--color-primary-600);
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  color: var(--color-primary-500);
+  transition: transform var(--transition-base);
+}
+
+.faq__item--open .faq__icon {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), padding var(--transition-slow);
+}
+
+.faq__item--open .faq__answer {
+  max-height: 300px;
+}
+
+.faq__answer-inner {
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+.faq__answer-inner p {
+  font-size: var(--text-base);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+  .faq__header h3 {
+    font-size: var(--text-3xl);
+  }
+
+  .faq__question {
+    font-size: var(--text-base);
+    padding: var(--space-5);
+  }
+
+  .faq__answer-inner {
+    padding: 0 var(--space-5) var(--space-5);
+  }
+}

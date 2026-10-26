@@ -1,0 +1,162 @@
+/* ============================================
+   DESIGN TOKENS — Festival Gastronômico 2026
+   ============================================
+   Paleta oficial do festival:
+   Vermelho #9b1d1c · Dourado #cf8a14
+   Creme #f5eada · Verde #0f4230
+   
+   Fonte display: Cooperative Dirty (títulos)
+   Fonte body: Hanken Grotesk (textos)
+   ============================================ */
+
+/* ---- @font-face — Cooperative Dirty (Regular + Bold) ---- */
+@font-face {
+  font-family: 'Cooperative Dirty';
+  src: url('../assets/fonts/Hafontia-Cooperative-Dirty.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooperative Dirty';
+  src: url('../assets/fonts/cooperative-dirty-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ============================================
+     CORES OFICIAIS DO FESTIVAL
+     ============================================ */
+
+  /* ---- Vermelho (Primária) ---- */
+  --color-primary-900: #4A0E0E;
+  --color-primary-800: #6B1514;
+  --color-primary-700: #83191A;
+  --color-primary-600: #9b1d1c;          /* ← COR OFICIAL */
+  --color-primary-500: #B52524;
+  --color-primary-400: #CE3635;
+  --color-primary-300: #E06060;
+  --color-primary-200: #EF9E9D;
+  --color-primary-100: #F8D2D2;
+
+  /* ---- Verde (Secundária) ---- */
+  --color-secondary-900: #071E14;
+  --color-secondary-800: #0f4230;        /* ← COR OFICIAL */
+  --color-secondary-700: #145636;
+  --color-secondary-600: #1B6D45;
+  --color-secondary-500: #258756;
+  --color-secondary-400: #36A86E;
+  --color-secondary-300: #5EC48E;
+  --color-secondary-200: #96DDB5;
+  --color-secondary-100: #D0F1DF;
+
+  /* ---- Dourado (Destaque) ---- */
+  --color-accent-900: #6B4500;
+  --color-accent-800: #8B5D08;
+  --color-accent-700: #A87210;
+  --color-accent-600: #cf8a14;           /* ← COR OFICIAL */
+  --color-accent-500: #D9A030;
+  --color-accent-400: #E4B64E;
+  --color-accent-300: #F0CD72;
+  --color-accent-200: #F7E0A0;
+  --color-accent-100: #FCF0D0;
+
+  /* ---- Neutros (Creme/Areia) ---- */
+  --color-neutral-900: #2A2219;
+  --color-neutral-800: #3D3529;
+  --color-neutral-700: #5A4F3E;
+  --color-neutral-600: #7A6F5E;
+  --color-neutral-500: #9A8F7E;
+  --color-neutral-400: #B5AA98;
+  --color-neutral-300: #D4CAB8;
+  --color-neutral-200: #E6DDD0;
+  --color-neutral-100: #EDE5D8;
+  --color-neutral-50: #f4ebdc;           /* ← COR OFICIAL */
+  --color-cream: #f4ebdc;
+  --color-white: #FFFFFF;
+
+  /* ============================================
+     TIPOGRAFIA
+     ============================================ */
+
+  /* Fonte pesada/display para títulos */
+  --font-display: 'Cooperative Dirty', 'Georgia', serif;
+  /* Fonte limpa para corpo de texto */
+  --font-heading: 'Cooperative Dirty', 'Georgia', serif;
+  --font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Escala tipográfica (generosa para títulos grandes) */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-5xl: 3.5rem;     /* 56px */
+  --text-6xl: 4.5rem;     /* 72px */
+  --text-7xl: 5.5rem;     /* 88px — hero-size */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+
+  /* ---- Espaçamentos ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ---- Bordas e Raios ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---- Sombras ---- */
+  --shadow-sm: 0 1px 2px rgba(42, 34, 25, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 34, 25, 0.12);
+  --shadow-lg: 0 8px 24px rgba(42, 34, 25, 0.16);
+  --shadow-xl: 0 16px 48px rgba(42, 34, 25, 0.20);
+
+  /* ---- Transições ---- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-narrow: 800px;
+  --navbar-height: 84px;
+
+  /* ---- Z-index ---- */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-navbar: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+}

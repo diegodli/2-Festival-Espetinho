@@ -1,0 +1,144 @@
+/* ============================================
+   LOGO TICKER / MARQUEE DE PARCEIROS
+   Exatamente correspondente ao design solicitado
+   ============================================ */
+
+.logo-ticker {
+  width: 100%;
+  background-color: var(--color-cream);
+  padding: 1.5rem 0; /* py-6 */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  z-index: 5;
+}
+
+@media (min-width: 640px) {
+  .logo-ticker {
+    padding: 2rem 0; /* sm:py-8 */
+  }
+}
+
+/* Gradientes sutis nas bordas para fade suave */
+.logo-ticker::before,
+.logo-ticker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .logo-ticker::before,
+  .logo-ticker::after {
+    width: 6rem;
+  }
+}
+
+.logo-ticker::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-cream), rgba(244, 235, 220, 0));
+}
+
+.logo-ticker::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-cream), rgba(244, 235, 220, 0));
+}
+
+/* Container que segura as duas faixas contínuas */
+.logo-ticker__container {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-ticker__track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1rem; /* gap-4 */
+  padding-left: 1rem; /* pl-4 */
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+@media (min-width: 640px) {
+  .logo-ticker__track {
+    gap: 3rem; /* sm:gap-12 */
+    padding-left: 3rem; /* sm:pl-12 */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-ticker__track {
+    animation: none;
+  }
+}
+
+/* Item individual do logo */
+.logo-ticker__item {
+  position: relative;
+  height: 3.75rem;
+  width: 9.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .logo-ticker__item {
+    height: 4.75rem;
+    width: 11.5rem;
+    padding: 0 0.75rem;
+  }
+}
+
+/* Logos horizontais largos (logo2): largura proporcional para manter a mesma altura visual dos outros */
+.logo-ticker__item--wide {
+  width: 15rem;
+}
+
+@media (min-width: 640px) {
+  .logo-ticker__item--wide {
+    width: 20rem;
+  }
+}
+
+.logo-ticker__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.logo-ticker__image--wide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-ticker__item:hover .logo-ticker__image,
+.logo-ticker__image:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}

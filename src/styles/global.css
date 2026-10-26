@@ -1,0 +1,308 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================
+   Design system do Festival Gastronômico 2026
+   Fonte display: Cooperative Dirty (títulos)
+   Fonte body: Hanken Grotesk (textos)
+   ============================================ */
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-50);
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TIPOGRAFIA — Cooperative Dirty para títulos
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-primary-600);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* Escala grande e impactante para títulos */
+h1 { font-size: var(--text-6xl); }
+h2 { font-size: var(--text-5xl); }
+h3 { font-size: var(--text-4xl); }
+h4 { font-size: var(--text-3xl); }
+
+p {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-neutral-700);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* ---- Container Utilitário ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+.section {
+  padding: var(--space-20) 0;
+}
+
+.section--dark {
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-50);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--color-accent-300);
+}
+
+.section--dark p {
+  color: var(--color-neutral-200);
+}
+
+.section--cream {
+  background-color: var(--color-neutral-100);
+}
+
+.section--green {
+  background-color: var(--color-secondary-800);
+  color: var(--color-neutral-50);
+}
+
+.section--green h2,
+.section--green h3,
+.section--green h4 {
+  color: var(--color-accent-300);
+}
+
+.section--green p {
+  color: var(--color-secondary-100);
+}
+
+/* ---- Section Header Padrão ---- */
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section__subtitle {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-600);
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  .section__subtitle {
+    font-size: 0.725rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.section__title {
+  margin-bottom: var(--space-4);
+}
+
+.section__description {
+  font-size: var(--text-lg);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary-800);
+  color: var(--color-white);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-900);
+}
+
+.btn--accent {
+  background-color: var(--color-accent-600);
+  color: var(--color-secondary-800);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-accent-700);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary-800);
+}
+
+.btn--outline-dark {
+  background-color: transparent;
+  color: var(--color-secondary-800);
+  border: 2px solid var(--color-secondary-800);
+}
+
+.btn--outline-dark:hover {
+  background-color: var(--color-secondary-800);
+  color: var(--color-white);
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 768px) {
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-4xl); }
+  h3 { font-size: var(--text-3xl); }
+
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Padding lateral para os títulos das seções no mobile */
+  .hero__title,
+  .about__title,
+  .voting__title,
+  .participate__title,
+  .fane__title,
+  .faq__header h3,
+  .section__title {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+
+  .btn {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+  }
+
+  /* Em telas menores de smartphone, respiro lateral ampliado */
+  .hero__title,
+  .about__title,
+  .voting__title,
+  .participate__title,
+  .fane__title,
+  .faq__header h3,
+  .section__title {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ---- Acessibilidade ---- */
+:focus-visible {
+  outline: 3px solid var(--color-accent-600);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

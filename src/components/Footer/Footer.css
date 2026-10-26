@@ -1,0 +1,212 @@
+/* ============================================
+   FOOTER INSTITUCIONAL
+   Fundo igual ao Hero (Fundo-hero.png) + Apenas Ícones Sociais
+   ============================================ */
+.footer {
+  position: relative;
+  background-color: var(--color-primary-900);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 3.5rem 0 2rem;
+  overflow: hidden;
+  border-top: 3px solid var(--color-accent-600);
+}
+
+/* Película suave para assegurar contraste perfeito sobre a textura do hero */
+.footer__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 14, 14, 0.82) 0%,
+    rgba(45, 8, 8, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+.footer__container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.75rem;
+}
+
+/* Coluna Institucional */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.footer__logo {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.35));
+}
+
+.footer__institutional {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__entity {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.25;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.footer__dept {
+  font-family: var(--font-body);
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--color-accent-300);
+  margin: 0 0 0.35rem 0;
+}
+
+.footer__festival {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.footer__festival strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* Redes Sociais apenas com ícones */
+.footer__social-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.footer__social-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer__social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  transition: all 250ms ease;
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+}
+
+.footer__social-btn:hover {
+  background: var(--color-accent-600);
+  border-color: var(--color-accent-500);
+  color: var(--color-secondary-900);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(207, 138, 20, 0.4);
+}
+
+/* Linha Inferior */
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__bottom p {
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.footer__bottom-note {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Responsividade */
+@media (max-width: 860px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer__main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer__brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .footer__logo {
+    height: clamp(96px, 26vw, 120px);
+    width: auto;
+    max-width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .footer__institutional {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__social-area {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer__social-icons {
+    justify-content: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
