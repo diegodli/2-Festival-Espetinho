@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './Hero.css';
 import fundoHero from '../../assets/Fundo-hero.png';
 import imgHero from '../../assets/img-hero-espetinhos.png';
-import logoFestEspetinho from '../../assets/logo-fest-espetinho.png';
+import logoFestEspetinho from '../../assets/logohero.webp';
 
 /* ── Data-alvo: 20 de novembro de 2026, 00:00 (horário de Brasília) ── */
 const TARGET_DATE = new Date('2026-11-20T00:00:00-03:00').getTime();

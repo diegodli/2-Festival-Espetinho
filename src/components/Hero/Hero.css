@@ -212,11 +212,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
   }
 
   .hero__mobile-logo-img {
-    max-width: 125px;
+    max-width: 200px;
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -249,7 +250,7 @@
 
 @media (max-width: 480px) {
   .hero__mobile-logo-img {
-    max-width: 105px;
+    max-width: 190px;
   }
 
   .hero__title {

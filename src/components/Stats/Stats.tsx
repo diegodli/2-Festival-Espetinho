@@ -6,10 +6,12 @@ interface StatItem {
 }
 
 const STATS: StatItem[] = [
+  /*
   {
     value: '+R$ 2.000,00',
     label: 'Em Prêmios',
   },
+  */
   {
     value: '18',
     label: 'Churrasqueiros Participantes',
