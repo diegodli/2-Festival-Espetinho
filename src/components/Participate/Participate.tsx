@@ -47,9 +47,9 @@ export function Participate() {
             />
             <div className="participate__bento-overlay" aria-hidden="true" />
             <div className="participate__bento-content">
-              <h3 className="participate__bento-title">18 vagas para churrasqueiros</h3>
+              <h3 className="participate__bento-title">16 vagas para churrasqueiros</h3>
               <p className="participate__bento-text">
-                Inscreva-se de 3 a 7 de novembro e garanta sua chance.
+                Inscrições presenciais nos dias 9 e 10 de novembro
               </p>
             </div>
           </div>
@@ -64,9 +64,9 @@ export function Participate() {
             />
             <div className="participate__bento-overlay" aria-hidden="true" />
             <div className="participate__bento-content">
-              <h3 className="participate__bento-title">R$ 2.000 em prêmios</h3>
+              <h3 className="participate__bento-title">Premiação para os vencedores</h3>
               <p className="participate__bento-text">
-                Os três primeiros colocados recebem prêmios em dinheiro e brindes.
+                Os três primeiros colocados recebem prêmios.
               </p>
             </div>
           </div>
@@ -89,16 +89,8 @@ export function Participate() {
           </div>
         </div>
 
-        {/* Botões de Ação Centralizados */}
+        {/* Botão de Ação Centralizado */}
         <div className="participate__actions">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeUBXNWJPUKk3ngQMzHcUd3H5MAduq9ERUZDSPSFlYVRm1PLA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="participate__btn-gold"
-          >
-            Quero me Inscrever como Churrasqueiro
-          </a>
           <a href="#edital" className="participate__btn-outline">
             Consultar o Edital Completo
           </a>
