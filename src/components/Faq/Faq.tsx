@@ -23,11 +23,6 @@ const FAQ_DATA: FaqItem[] = [
       'A votação será realizada pelo QR Code disponível em cada estande. É necessário comprar um espetinho do participante escolhido, respeitando as regras oficiais.',
   },
   {
-    question: 'Como faço para participar como churrasqueiro?',
-    answer:
-      'As inscrições acontecem de 3 a 7 de novembro de 2026, presencialmente na SDEC ou pelo link oficial disponibilizado pela organização. É necessário atender aos requisitos do edital.',
-  },
-  {
     question: 'A inscrição na FANE é gratuita?',
     answer:
       'Sim! A inscrição para participar da FANE como expositor não terá taxa. O preenchimento do formulário não substitui a confirmação da participação pela organização, conforme as orientações divulgadas.',
