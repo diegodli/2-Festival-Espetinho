@@ -22,6 +22,30 @@ export function Footer() {
             <div className="footer__institutional">
               <h4 className="footer__entity">Prefeitura Municipal de Maranguape</h4>
               <p className="footer__dept">Secretaria de Desenvolvimento Econômico — SDEC</p>
+              <p className="footer__address">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <a
+                  href="https://maps.google.com/?q=Rua+Mundica+Paula,+273,+Centro,+Maranguape+-+CE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer__address-link"
+                >
+                  Rua Mundica Paula, 273, Centro, Maranguape-CE
+                </a>
+              </p>
               <p className="footer__festival">
                 Festival Gastronômico de Espetinhos • Integrado ao <strong>Festival Viva Maranguape — 175 Anos</strong>
               </p>

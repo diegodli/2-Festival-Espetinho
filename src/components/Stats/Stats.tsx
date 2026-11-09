@@ -13,7 +13,7 @@ const STATS: StatItem[] = [
   },
   */
   {
-    value: '18',
+    value: '16',
     label: 'Churrasqueiros Participantes',
   },
   {
